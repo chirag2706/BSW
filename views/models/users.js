@@ -1,6 +1,6 @@
 var mongoose = require("mongoose");
 //connecting of mongoose on local server
-mongoose.connect('mongodb://localhost:27017/BSW|IITTP',{useNewUrlParser:true});
+mongoose.connect('mongodb://localhost:27017/localBWS',{useNewUrlParser:true});
 var passportLocalMongoose = require("passport-local-mongoose"); 
 //making of schema
 var schema = new mongoose.Schema({

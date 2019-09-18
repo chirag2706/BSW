@@ -81,6 +81,12 @@ nav .brand-logo :hover,.fas:hover{
   background-color: #333300;
   color:white;
 }
+
+#cross:hover{
+  background:none;
+}
+
+
 nav{
   position:fixed;
   z-index:2;
