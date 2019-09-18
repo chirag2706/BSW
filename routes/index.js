@@ -17,8 +17,8 @@ var randomstring = require('randomstring');
 var arr = [],number = 0;
 var x,y,z,current;
 var months = ['Jan','Feb','Mar','Apr','May','June','July','Aug','Sep','Oct','Nov','Dec'];
-// var flash = require("connect-flash");
-// mongoose.connect("mongodb://localhost:27017/BSW|IITTP",{useNewUrlParser:true});
+var flash = require("connect-flash");
+mongoose.connect("mongodb://localhost:27017/localBWS",{useNewUrlParser:true});
 
 router.use(bodyParser.urlencoded({extended:true}));
 
@@ -1148,21 +1148,20 @@ router.post("/login",function(req,res,next){
         }
     });
 });
-router.get("/:id",(req,res)=>{
-    User.find({},(err,allUsers)=>{
-            if (err){
-                res.render("error");
-            }else{
-                for( var i=0;i<allUsers.length;i++){
-                    if (req.params.id == allUsers[i]._id){
-                        x = allUsers[i];
-                        res.render("main",{currentUser:x});
-                    }
-                }
-            }
-        });
-    
+
+
+//route to get into NSS photos page
+router.get("/:id/nssactivities", function(req,res){
+    var source = [];
+    for(var i=1; i<10; i++) source.push("/nss_photos/img-" + i +".JPG");
+    User.findById(req.params.id,function(err,currentUser){
+        res.render("nssphotos", {data:source,currentUser:currentUser});
+    });
 });
+
+
+
+
 
 
 
@@ -1202,5 +1201,23 @@ router.post("/resetPassword/:userEmail",function(req,res){
         }
     });
 });
+
+router.get("/:id",(req,res)=>{
+    User.find({},(err,allUsers)=>{
+            if (err){
+                res.render("error");
+            }else{
+                for( var i=0;i<allUsers.length;i++){
+                    if (req.params.id == allUsers[i]._id){
+                        x = allUsers[i];
+                        res.render("main",{currentUser:x});
+                    }
+                }
+            }
+        });
+    
+});
+
+
 
 module.exports = router;
