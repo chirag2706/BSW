@@ -1,0 +1,106 @@
+<% include ./partials/header2 %>
+  <!-- ADD CONTENT HERE -->
+  <div style="padding: 24px">
+  <h3>Peer Assisted Learning </h3>
+  <p>PAL is a network of students which supports Peer Learning by involving students regularly in scheduled sessions for specific courses or modules selected by the students.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque id nunc nec volutpat. Etiam pellentesque tristique arcu, non consequat magna fermentum ac.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque id nunc nec volutpat. Etiam pellentesque tristique arcu, non consequat magna fermentum ac.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque id nunc nec volutpat. Etiam pellentesque tristique arcu, non consequat magna fermentum ac.</p>
+
+   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque id nunc nec volutpat. Etiam pellentesque tristique arcu, non consequat magna fermentum ac.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque id nunc nec volutpat. Etiam pellentesque tristique arcu, non consequat magna fermentum ac.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque id nunc nec volutpat. Etiam pellentesque tristique arcu, non consequat magna fermentum ac.</p>
+
+   <h4>Committee</h4>
+
+   <table class="striped" >
+        <thead>
+          <tr>
+              <th>No.</th>
+              <th>Name</th>
+              <th>Background</th>
+              <th>PAL Designation</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Dr. Suresh Jain</td>
+            <td>CE</td>
+            <td>Chairman</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Dr. Rajib Biswas</td>
+            <td>CY</td>
+            <td>Member</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Dr. Subrahmanyam Gorthi</td>
+            <td>EE</td>
+            <td>Member</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>Dr. Durga Prasad Challa</td>
+            <td>MA</td>
+            <td>Member</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>Dr. Madan Mohan Avulapati </td>
+            <td>ME</td>
+            <td>Member</td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td>Mr. Shagun Mittal </td>
+            <td>Student, AAS</td>
+            <td>Convenor</td>
+          </tr>
+          <tr>
+            <td>7</td>
+            <td>Mr. Bhomik Kankaria</td>
+            <td>Student, ACM</td>
+            <td>Member</td>
+          </tr>
+          <tr>
+            <td>8</td>
+            <td>Mr. Aravindh Rajiv</td>
+            <td>Student, ACM</td>
+            <td>Member</td>
+          </tr>
+
+        </tbody>
+      </table>
+
+    <h4>Benefits of Peer Assisted Learning</h4>
+    <ul style="display: list-item">
+     <li>PAL would help all the students of all the abilities.</li>
+     <li>PAL would create an atmosphere where students will interact and support each other using peer-to-peer (P2P) teaching and learning method.</li>
+     <li> PAL would encourage students to think more deeply about course and consolidate understanding of core concepts which further increases confidence.</li>
+     <li>PAL would help in improving overall performance of students and help in improving successful completion of degree.</li>
+    </ul>
+
+  </div>
+  <div class="fixed-action-btn">
+    <a class="btn-floating btn-large red">
+      <i class="large material-icons">mode_edit</i>
+    </a>
+    <ul>
+      <li><a href = "https://www.facebook.com/iittp/" class="btn-floating red"><i class="fab fa-facebook-f"></i></a></li>
+      <li><a href = "mailto:help@bsw.iittp.ac.in" class="btn-floating yellow darken-1"><i class="far fa-envelope"></i></a></li>
+      <li><a href = "https://twitter.com/iit_tirupati" class="btn-floating green"><i class="fab fa-twitter"></i></a></li>
+      <li><a href = "https://www.linkedin.com/company/iittirupati/" class="btn-floating blue"><i class="fab fa-linkedin"></i></a></li>
+      <% if (currentUser!==undefined){ %>
+      <li><a href = "https://board-of-student-welfare-chirag2706.c9users.io/<%= currentUser._id%>" class="btn-floating blue"><i class="fas fa-home"></i></a></li>
+      <% }else{ %>
+      <li><a href = "https://board-of-student-welfare-chirag2706.c9users.io/" class="btn-floating blue"><i class="fas fa-home"></i></a></li>
+      <% } %>
+    </ul>
+  </div>
+
+
+
+  
+
+  <% include ./partials/footer %>

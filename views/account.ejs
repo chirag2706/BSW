@@ -1,0 +1,91 @@
+<% include partials/header %>
+<div class = "flexible">
+    <div class="row">
+    <form class="col s12" method = "post",action = "/account/<%= currentUser._id %>" id = "add">
+      <div id = "border" class = "col s12">
+        <% if (successMessage.length>0){ %>
+        <div class="alert alert-success" role="alert"style = "text-align:center;margin-top:20px;margin-bottom:15px;">
+          <%= successMessage %>
+        </div>
+        <% } %>
+            <div class="row" style = "margin-top:20px;">
+        <div class="input-field col s6">
+          <i class="material-icons prefix">account_circle</i>
+          <input  id="full_name" type="text" class="validate" name = "username" value = "<%= currentUser.username %>"required>
+          <label for="full_name">Username</label>
+        </div>
+        <div class="input-field col s6">
+          <i class="material-icons prefix">phone</i>
+          <input id="phone" type="text" class="validate" name = "phone" value = "<%= currentUser.Phone %>" required>
+          <label for="phone">telephone</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          
+          <select  name = "profession">
+            <option value = "<%= currentUser.Profession %>" selected><%= currentUser.Profession %></option>
+            <option value="Teacher" >Teacher</option>
+            <option value="Student" >Student</option>
+          </select>
+        <label>Profession</label>
+        </div>
+      </div>
+       <div class="row">
+        <div class="input-field col s12">
+          
+          <select name = "batch">
+            <option value = "<%= currentUser.Batch %>" selected><%= currentUser.Batch %></option>
+            <option value="2015-2016 Batch" >2015-2016 Batch</option>
+            <option value="2016-2017 Batch" >2016-2017 Batch</option>
+            <option value="2017-2018 Batch" >2017-2018 Batch</option>
+            <option value="2018-2019 Batch" >2018-2019 Batch</option>
+          </select>
+    <label>Batch</label>
+        </div>
+      </div>
+       <div class="row">
+        <div class="input-field col s12">
+          
+          <select name = "branch">
+            <option value = "<%= currentUser.Branch %>" selected><%= currentUser.Branch %></option>
+            <option value="Computer Science and engineering">Computer Science and engineering</option>
+            <option value="Chemical Engineering">Chemical Engineering</option>
+            <option value="Electrical Engineering">Electrical Engineering</option>
+            <option value="Mechanical Engineering">Mechanical Engineering</option>
+            <option value="Civil Engineering">Civil Engineering</option>
+          </select>
+    <label>Branch</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12 l12">
+          <i class="material-icons prefix">email</i>
+          <input id="email" type="email" class="validate" name = "email" value = "<%= currentUser.Email %>" required>
+          <label for="email"> Email</label>
+          <span class="helper-text" data-error="wrong" data-success="right">Official Id Only</span>
+        </div>
+      </div>
+      <!--<div class="row">-->
+      <!--  <div class="input-field col s12 l12">-->
+      <!--    <i class="material-icons prefix">lock</i>-->
+      <!--    <input id="password" type="password" class="validate" name = "password" value = "<%= currentUser.Password %>" minlength = "9" required>-->
+      <!--    <label for="password">Password</label>-->
+      <!--    <span class="helper-text" data-error="wrong" data-success="right">Atleast 9 characters</span>-->
+      <!--  </div>-->
+      <!--</div>-->
+    <button class="btn waves-effect waves-light" name="action">Update
+    </button>
+    
+      </div>
+      
+    </form>
+  </div>
+</div>
+<% include partials/footer %>
+<script type = "text/javascript">
+  
+  $(document).ready(function(){
+    $('select').formSelect();
+  });
+</script>

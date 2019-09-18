@@ -1,0 +1,135 @@
+<div class="fixed-action-btn">
+  <a class="btn-floating btn-large red">
+    <i class="large material-icons">mode_edit</i>
+  </a>
+  <ul>
+    <li><a href = "https://www.facebook.com/iittp/" class="btn-floating red"><i class="fab fa-facebook-f"></i></a></li>
+    <li><a href = "mailto:help@bsw.iittp.ac.in" class="btn-floating yellow darken-1"><i class="far fa-envelope"></i></a></li>
+    <li><a href = "https://twitter.com/iit_tirupati" class="btn-floating green"><i class="fab fa-twitter"></i></a></li>
+    <li><a href = "https://www.linkedin.com/company/iittirupati/" class="btn-floating blue"><i class="fab fa-linkedin"></i></a></li>
+    <% if (currentUser!==undefined){ %>
+    <li><a href = "https://board-of-student-welfare-chirag2706.c9users.io/<%= currentUser._id%>" class="btn-floating blue"><i class="fas fa-home"></i></a></li>
+    <% }else{ %>
+    <li><a href = "https://board-of-student-welfare-chirag2706.c9users.io/" class="btn-floating blue"><i class="fas fa-home"></i></a></li>
+    <% } %>
+  </ul>
+</div>
+<footer class="page-footer teal">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Board of Student Welfare, IITT</h5>
+          <p class="grey-text text-lighten-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque id nunc nec volutpat. Etiam pellentesque tristique arcu, non consequat magna fermentum ac. </p>
+
+
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Useful links</h5>
+          <ul>
+            <li><a class="white-text" href="http://iittp.ac.in" target="_blank">IIT Tirupati</a></li>
+            <li><a class="white-text" href="documents/StudentsConstitution.pdf" target="_blank">BSW Constitution</a></li>
+            <li><a class="white-text" href="#">Others</a></li>
+            <li><a class="white-text" href="#">Feedback</a></li>
+          </ul>
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Connect</h5>
+          <table id="layouttable">
+						<tr>
+							<td class="imagerow"><a href="https://twitter.com/iit_tirupati" target="_blank"><i class="fab fa-twitter" aria-hidden="true"></i></a></td>
+							<td class="imagerow"><a href="https://www.linkedin.com/company/iittirupati/" target="_blank"><i class="fab fa-linkedin-in" aria-hidden="true" ></i></a></td>
+							<td class="imagerow"><a href="https://www.facebook.com/iittp/" target="_blank"><i class="fab fa-facebook-f" aria-hidden="true"  ></i></a></td>
+						</tr>
+					</table>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright" id  = "add">
+      <div class="container" >
+      Made by <a class="brown-text text-lighten-3" href="http://aakashsyadav.github.io" target="_blank">Aakash Yadav</a> and <a class="brown-text text-lighten-3" href = "https://github.com/chirag2706">Chirag Gupta</a>
+      <!--<a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a>-->
+      </div>
+    </div>
+        
+  </footer>
+  
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js" ></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js" text = "text/javascript"></script>
+
+  <script type="text/javascript">
+    (function($){
+      $(function(){
+    
+        $('.sidenav').sidenav();
+        $('.parallax').parallax();
+    
+      }); // end of document ready
+    })(jQuery); // end of jQuery name space
+
+
+
+    $( document ).ready(function(){
+      $(".dropdown-trigger").dropdown();  
+    });
+      
+
+       $(document).ready(function(){
+         $('.scrollspy').scrollSpy();
+       });
+   $(document).ready(function(){
+    $('.sidenav').sidenav();
+  });
+    $(document).ready(function(){
+      $(".alert.alert-danger").click(function(){
+        this.remove();
+      })
+    });
+    $(document).ready(function(){
+      $(".alert.alert-success").click(function(){
+        this.remove();
+      })
+    });
+    $(document).ready(function(){
+      $('.modal').modal();
+    });
+  
+      $(document).ready(function(){
+        $('select').formSelect();
+      });
+      
+
+      $(window).on('load', function() { // makes sure the whole site is loaded 
+        $('#happy').fadeOut(); // will first fade out the loading animation 
+        $('.progress').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website. 
+        $('body').delay(350).css({'overflow':'visible'});
+      })
+      $(document).ready(function(){
+        $('.fixed-action-btn').floatingActionButton();
+      });
+            
+  </script>
+  
+  <script type = "text/javascript">
+     $(document).ready(function(){
+    $('.fixed-action-btn').floatingActionButton();
+  });
+  $(document).ready(function(){
+    $('.collapsible').collapsible();
+  });
+  // Or with jQuery
+
+  // $(document).ready(function(){
+  //   $('.fixed-action-btn').floatingActionButton();
+  // });
+  </script>
+
+  </body>
+</html>

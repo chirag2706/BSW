@@ -1,0 +1,30 @@
+<% include ./partials/header2 %>
+<div>
+    <div style = "float:left;width:100%;">
+        <div style = "display:flex;flex-direction:column;align-items:center">
+            <div class  = "card-panel hoverable" style = "width:80%;">
+                <form method = "post" action = "/updateHours/<%=currentUser._id%>">
+                    <input type = "text"  placeholder = "Enter url of stylesheet to upload" name = "spreadsheet"/>
+                    <button class="btn waves-effect waves-light" type="submit"  id = "upload" style = "float:right;cursor:pointer;" >Upload
+    <i class="fas fa-upload"></i>
+    </button>
+                    <!--<a class="waves-effect waves-light btn"><i class="material-icons left">cloud</i>button</a>-->
+                </form>
+            </div>
+        </div>
+    </div>
+    <% var nssCoordinator %>
+    <%var u = nssCoordinator %>
+    <% if (u===undefined){ %>
+    <div >
+        <iframe src = "https://docs.google.com/spreadsheets/d/1KApRLn2NopKkFGshvGXvts-dJkk2X32j9G909aT9yEU/edit?ts=5cbc8e3c#gid=0" style = "width:80%;margin-left:10%;"></iframe>
+    </div>
+    
+    <% }else{ %>
+    <div >
+    <iframe src = "<%= u %>" style = "width:80%;margin-left:10%;"></iframe>
+    </div>
+    <% } %>
+    
+</div>
+<% include ./partials/footer %>

@@ -1,0 +1,133 @@
+<% include ./partials/header2 %>
+    <div class = "flexible bonafide">
+    <div class="row">
+    <form class="col s12 " method = "post" action = "/bonafideCertificate/<%=currentUser._id%>" id = "add">
+      <div id = "border" class = "col s12 certificate" style = "max-width: 700px;">
+          <h1 style = "text-align: center;">Bonafide Certificate</h1>
+
+          <div class="row" style = "margin-top:20px;">
+              <div class="col s12">
+                <div style = "text-align:center">Certificates will be issued only to concerned student on production of <em><strong>IIT Tirupati Student Identity Card</strong></em>(Please note that in certain cases students may be asked to give additional documents /certificate from HOD/respective authority). In certain cases, section may refuse to issue the Bonafide Certificate by specifying valid reasons. </div>
+              </div>
+          </div>
+            <div class="row" style = "margin-top:20px;">
+              <div class="input-field col s12">
+                <i class="material-icons prefix">account_circle</i>
+                <input  id="full_name" type="text" class="validate" name = "username" title = "Please enter your name" required>
+                <label for="full_name">FullName</label>
+              </div>
+            </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <!-- <select  name = "profession" required>
+            <option value="" disabled selected id  = "a"></option>
+            <option value="Teacher" >Teacher</option>
+            <option value="Student" >Student</option>
+          </select> -->
+          <input  id="father_name" type="text" class="validate" name = "fathername" title = "Please enter your Father's name" required>
+          <label for = "father_name">Father's Name</label>
+        </div>
+      </div>
+       <div class="row">
+        <div class="input-field col s12">
+          
+          <input  id="mother_name" type="text" class="validate" name = "mothername" title = "Please enter your Mother's name" required>
+          <label for = "mother_name">Mother's Name</label>
+        </div>
+      </div>
+       <div class="row">
+        <div class="input-field col s12">
+          
+          <input  id="Roll" type="text" class="validate" name = "Roll" title = "Roll No" required>
+          <label for = "Roll">Roll No</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <select name = "Gender" required>
+            <!-- <option value="" disabled selected id = "a"></option> -->
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+          </select>
+         
+          <label>Gender</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <select name = "branch" required>
+            <!-- <option value="" disabled selected id = "a"></option> -->
+            <option value="Computer Science and engineering">Computer Science and engineering</option>
+            <option value="Chemical Engineering">Chemical Engineering</option>
+            <option value="Electrical Engineering">Electrical Engineering</option>
+            <option value="Mechanical Engineering">Mechanical Engineering</option>
+            <option value="Civil Engineering">Civil Engineering</option>
+          </select>
+         
+          <label>Branch</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <select name = "batch" required>
+            <!-- <option value="" disabled selected id  = "a"></option> -->
+            <option value="2015-2016 Batch" >2015-2016 Batch</option>
+            <option value="2016-2017 Batch" >2016-2017 Batch</option>
+            <option value="2017-2018 Batch" >2017-2018 Batch</option>
+            <option value="2018-2019 Batch" >2018-2019 Batch</option>
+          </select>
+          <label>Batch</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <!-- <input  id="bonafideCertificate" type="text" class="validate" name = "mothername" title = "Details" required> -->
+          <input  id="bonafideCertificate" type="text" class="validate" name = "place" title = "Details" required>
+          <label for = "bonafideCertificate">Bonafide Certificate in favour of (eg. Passport Office)</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <select name = "purpose" required>
+            <!-- <option value="" disabled selected id  = "a"></option> -->
+            <option value="Visa Application" >Visa Application</option>
+            <option value="Outside Scholarship" >Outside Scholarship</option>
+            <option value="Passport Application" >Passport Application</option>
+            <option value="Income Tax" >Income Tax</option>
+            <option value="Education Loan" >Education Loan</option>
+            <option value="Self Arranged Internship" >Self Arranged Internship</option>
+            <option value="Offcial Internship" >Offcial Internship</option>
+            <option value="Summer Training" >Summer Training</option>
+            <option value="Presentaion of Paper" >Presentaion of Paper</option>
+            <option value="Attending Seminar" >Attending Seminar</option>
+          </select>
+          <label>Purpose of Bonafide Certificate</label>
+        </div>
+      </div>
+    <button style = "text-align:center;" class="btn waves-effect waves-light" type="submit" name="action">Submit
+    <i class="material-icons right">send</i>
+    </button>
+    <div class="row">
+        <div class="col s12">
+          <div style = "margin-top: 15px;">If you face any trouble using this service, Kindly inform at <em><a href = "mailto:cs18b006@iittp.ac.in">cs18b006@iittp.ac.in</a></em> and download the given format. Change all highlighted content and fill it and get it signed by Assistant Registrar UG Section (AR UGS). You need to show your ID Card for verification </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col s12">
+          <div style = "font-size:20px;"><a href = "/docx" download = "a.docx">Click here to download the template</a></div>
+        </div>
+    </div>
+    
+      </div>
+      
+    </form>
+  </div>
+</div>
+<% include partials/footer %>
+<script type = "text/javascript">
+  
+  $(document).ready(function(){
+    $('select').formSelect();
+  });
+</script>

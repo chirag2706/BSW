@@ -1,0 +1,210 @@
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+
+nav ul a,
+nav .brand-logo {
+  color: #009688;
+  font-size: initial;
+}
+
+p {
+  line-height: 2rem;
+}
+
+.sidenav-trigger {
+  color: #26a69a;
+}
+
+.parallax-container {
+  min-height: 380px;
+  line-height: 0;
+  height: auto;
+  color: rgba(255,255,255,.9);
+}
+  .parallax-container .section {
+    width: 100%;
+  }
+
+@media only screen and (max-width : 992px) {
+  .parallax-container .section {
+    position: absolute;
+    top: 40%;
+  }
+  #index-banner .section {
+    top: 10%;
+  }
+}
+
+@media only screen and (max-width : 600px) {
+  #index-banner .section {
+    top: 0;
+  }
+}
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+  font-size: inherit;
+}
+
+footer.page-footer {
+  margin: 0;
+}
+
+
+.fa-facebook-f:hover {
+		color: #3b5998;
+	}
+.fa-facebook-f {
+		color: white;
+	}
+.fa-linkedin-in {
+		color: white;
+	}
+.fa-linkedin-in:hover {
+		color: #0077B5;
+	}
+.fa-twitter{
+	color: white;
+}
+.fa-twitter:hover{
+	color: #38A1F3;
+}
+nav ul a:hover,
+nav .brand-logo :hover,.fas:hover{
+  background-color: #333300;
+  color:white;
+}
+nav{
+  position:fixed;
+  z-index:2;
+}
+.teal-text.text-lighten-2{
+  padding-top:30px;
+}
+.waves-effect{
+  /*background-color: chocolate;*/
+  background-color: teal;
+}
+/*body{*/
+/*  background-color: #ebebe0;*/
+/*}*/
+nav .nav-wrapper{
+  background-color:white ;
+}
+.fas{
+  font-size:14px;
+  /*color:firebrick;*/
+}
+.sidenav li>a:hover{
+  background-color: black;
+  color:white;
+}
+.sidenav li>a>i{
+  margin:0 0 0 0;
+}
+.sidenav li>a:hover>i{
+  background-color: black;
+  color:white;
+}
+.page-footer .footer-copyright {
+  text-align:center;
+}
+.flexible{
+  display: flex;
+  justify-content:center;
+  width:100%;
+ 
+}
+#test{
+  position: relative;
+}
+#border{
+  padding-left:25px;
+  padding-right:25px;
+  padding-bottom:40px;
+  padding-top:40px;
+  margin-top:100px;
+  box-shadow: 0 6px 16px 0 rgba(0,0,0,1);
+  /*margin-left:20px;*/
+  /*margin-right:20px;*/
+  /*padding-top:-20px;*/
+}
+
+button{
+  float:right;
+}
+.border2{
+  box-shadow: 0 6px 16px 0 rgba(0,0,0,.4);
+  margin-top:50px;
+  margin-bottom:100px;
+  padding-right:30px;
+  padding-top:20px;
+  margin-left:20px;
+  margin-right:20px;
+  padding-left: 20px;
+  /*background-color:#e6ffff;*/
+}
+.flexible2{
+  display:flex;
+  width:100%;
+}
+*,*:before,*:after{
+  justify-content:center;
+}
+#forgot{
+  /*margin-top:30px;*/
+  float:right;
+  margin-right:10px;
+  margin-top:25px;
+}
+#login{
+  margin-top:30px;
+  margin-right:10px;
+  margin-bottom:25px;
+}
+#e,#p{
+  color:black;
+}
+#change{
+  color:black;
+}
+.row{
+  margin-left: 0px;
+  margin-right: 0px;
+}
+.alert.alert-danger{
+  width:100%;
+  padding:10px 0px 10px 0px;
+  background-color:#fcebee;
+  border:1px solid red;
+  font-size: 18px;
+}
+.alert.alert-success{
+  width:100%;
+  padding:10px 0px 10px 0px;
+  background-color:#ecf9d4;
+  border:1px solid green;
+  font-size: 18px;
+}
+.alert.alert-warning{
+  width:100%;
+  padding:10px 0px 10px 0px;
+  background-color:#ffffcc;
+  border:1px solid yellow;
+  font-size: 18px;
+}
+iframe{
+  width:70%;
+  height:600px;
+}
+
+#upload{
+  color:white;
+}
