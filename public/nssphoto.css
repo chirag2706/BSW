@@ -1,0 +1,26 @@
+#nss_act img {
+	cursor: pointer;
+	transition: 0.3s;
+	width: 100%;
+	float: left;
+	margin: 1.66%;
+	margin-bottom: 15px;
+	height: 200px;
+}
+
+#nss_act img:hover {
+	filter: grayscale(100%);
+	transform: scale(1.1);
+}
+
+#nss_tag {
+	margin-left: 1.66%;
+	margin-top: 15px;
+	font-size: 30px;
+	font-weight: 500;
+	text-transform: uppercase;
+	border-bottom: 2px solid #f1f1f1;
+	width: 30%;
+	padding-bottom: 20px;
+}
+

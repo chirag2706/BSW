@@ -1,0 +1,18 @@
+<% include ./partials/header2 %>
+
+
+<div id="nss_act" class="container">
+		<p id="nss_tag">NSS ACTIVITIES<p>
+		<h5>ARDUINO WORKSHOP</h5>
+		<hr>
+	<div class="row" style="display: flex; flex-wrap: wrap">
+		<% data.forEach(function(photo){ %>
+		<div class="col s12 m6 l4">
+			<a href=<%= photo %> data-lightbox=<%= photo %> ><img id="Img" src=<%= photo %>></a>
+		</div>
+		<% }); %>
+	</div>
+</div>
+
+
+<% include ./partials/footer %>

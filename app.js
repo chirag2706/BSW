@@ -32,7 +32,7 @@ app.use(express.static("public"));
 
 
 // //connecting of database(local server)
-// mongoose.connect("mongodb://localhost:27017/BSW|IITTP",{useNewUrlParser:true});
+mongoose.connect("mongodb://localhost:27017/localBWS",{useNewUrlParser:true});
 
 
 //using users model
@@ -83,6 +83,7 @@ app.use("/test",mainRoutes);
 app.use("/quest",mainRoutes);
 app.use("/login",mainRoutes);
 app.use("/logout",mainRoutes);
+app.use("/nssactivities",mainRoutes);
 
 //app will listen (means app will start)
 app.listen(3005,function(){
